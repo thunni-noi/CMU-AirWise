@@ -4,10 +4,8 @@ from fastai.tabular.all import *
 import pandas as pd
 import pathlib
 
-if st.secrets['current_platform'] != "pc" :
-    pathlib.WindowsPath = pathlib.PosixPath
 
-model_path = pathlib.Path("model\main_model.pkl")
+model_path = pathlib.Path(__file__).parents[1].joinpath("model\main_model.pkl")
 #gdd.download_file_from_google_drive(file_id="1X4ruvSrBwm4R83of4J0OLmLLYqXZgQHv",
 #                                    dest_path=model_path)
 
