@@ -3,12 +3,12 @@ from streamlit_js_eval import get_geolocation
 from streamlit_folium import st_folium
 import folium
 from weather_api import get_weather, getAirData
-from folium.features import CustomIcon
+#from folium.features import CustomIcon
 from run_model import model_predict
 import time
 
 st.set_page_config(
-    page_title="Bicycle prediction",
+    page_title="CMU AirWise",
     page_icon='https://s3-ap-northeast-1.amazonaws.com/killy-image/linestamp/1f/1f13/1f131746571cc91986f8b868ed2946789402c741',
     layout='wide',
     menu_items={
@@ -40,7 +40,8 @@ latitude, longitude = get_location_data()
 
 
 st.title('AirWise')
-st.header('Forecasting PM2.5 Prowess with WeatherWisdom')
+st.header('Forecasting PM2.5 Prowess with OpenWeatherAPI')
+st.caption('Weather data is pulled from openweatherAPI free package which has limited usage per day.')
 #st.sidebar.button('Resel all', on_click=st.experimental_rerun)
 st.caption(f'Your current latitude is {latitude} and longitude is {longitude}')
 st.subheader('Pick your location to fetch the weather from.')
