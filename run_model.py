@@ -14,7 +14,7 @@ else:
 def model_predict(hum, temp, pressure, rain):
     loaded_model = load_learner(model_path)
     to_predict = pd.Series([hum, temp, pressure, rain], index=['humidity', 'temperature', 'pressure', 'rain'])
-    return loaded_model.predict(to_predict)
+    return loaded_model.predict(to_predict)[0].items['pm']
    # return 6.9
 
 
