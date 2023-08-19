@@ -1,5 +1,4 @@
-torch
 streamlit
 streamlit-folium
 streamlit_js_eval
-fastai==2.3.0
+fastai
