@@ -1,9 +1,6 @@
-folium==0.14.0
-geopandas==0.13.2
-geopy==2.3.0
-pandas==2.0.3
-Requests==2.31.0
-Shapely==2.0.1
-streamlit==1.25.0
-streamlit_folium==0.13.0
-streamlit_js_eval==0.1.5
+https://download.pytorch.org/whl/cpu/torch-1.8.1%2Bcpu-cp39-cp39-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.9.1%2Bcpu-cp39-cp39-linux_x86_64.whl
+streamlit
+streamlit-folium
+streamlit_js_eval
+fastai==2.3.0
