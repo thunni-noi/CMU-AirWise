@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/thunni-noi/CMU-AirWise">
-    <img src="images/screenshot.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">AirWise</h3>
@@ -13,13 +13,13 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/thunni-noi/CMU-AirWise?color=dark-green) ![Issues](https://img.shields.io/github/issues/thunni-noi/CMU-AirWise) ![License](https://img.shields.io/github/license/thunni-noi/CMU-AirWise) ![![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cmu-airwise-heeudbkgeglffcw65qk6u9.streamlit.app/)
+![Contributors](https://img.shields.io/github/contributors/thunni-noi/CMU-AirWise?color=dark-green) ![Issues](https://img.shields.io/github/issues/thunni-noi/CMU-AirWise) ![License](https://img.shields.io/github/license/thunni-noi/CMU-AirWise) 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cmu-airwise-heeudbkgeglffcw65qk6u9.streamlit.app/)
 
 ## Table Of Contents
 
 * [เกี่ยวกับโปรเจกต์นี้](#เกี่ยวกับโปรเจกต์นี้)
 * [การใช้งาน](#การใช้งาน)
-  * [การรันบนเครื่อง Local](#การรันบนเครื่อง Local)
 
 ## เกี่ยวกับโปรเจกต์นี้
 
