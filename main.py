@@ -158,7 +158,7 @@ if [lat, lng] != ['n/a','n/a']:
         
         
         form_c1, form_c2 = st.columns(2)
-        if use_local := st.checkbox('Use current location', True):
+        if use_local := st.checkbox('Use current location', False):
             st.session_state['sel_lat'] = lat
             st.session_state['sel_lng'] = lng
         with form_c1 :
