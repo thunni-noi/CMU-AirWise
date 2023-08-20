@@ -20,9 +20,9 @@ def get_weather(lat, lng, mode):
             rain = weatherData['current']['rain']['1h'] * 24 / 1000 #average 1 day and mL
         else :
             rain = 0
-    elif mode == 'Average Today':
+    elif mode == 'Today(Average)':
         selected_data = weatherData['daily'][0]
-        temp = weatherData['current']['temp']
+        #temp = weatherData['current']['temp']
         raw_temp = selected_data['temp']
         temp = sum([raw_temp['day'], raw_temp['night'], raw_temp['morn'], raw_temp['eve']]) / 4
         pressure = selected_data['pressure']
