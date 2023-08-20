@@ -75,6 +75,7 @@ if [lat, lng] != ['n/a','n/a']:
 
     st.title('AirWise')
     st.header('Forecasting PM2.5 Prowess with OpenWeatherAPI')
+    st.markdown('Source code available on [GitHub](https://github.com/thunni-noi/CMU-AirWise)')
     st.caption('Weather data is pulled from openweatherAPI free package which has limited usage per day.')
     #st.sidebar.button('Resel all', on_click=st.experimental_rerun)
     st.caption(f'Your current latitude is {lat} and longitude is {lng}')
