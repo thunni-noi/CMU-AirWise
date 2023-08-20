@@ -38,7 +38,9 @@ def get_location_data():
         gps_retries -= 1 #To cap the waiting time to 15 sec
     time.sleep(3 + gps_retries) 
     try :
-        return loc['coords']['latitude'], loc['coords']['longitude']
+        output = loc['coords']['latitude'], loc['coords']['longitude']
+        st.success('Fetching GPS successfully!')
+        return output
     except:
         st.warning('Cannot fetch your gps data! ; Please enable gps then press the button below.')
         gps_retries += 1
@@ -100,13 +102,17 @@ else:
             height=1200
             )
         
-        sub_map_col1, sub_map_col2, none = st.columns([0.25,0.25,0.5])
+        sub_map_col1, sub_map_col2, sub_map_col3 = st.columns([0.25,0.25,0.5])
         if sub_map_col1.button('Back to current location'):
             st.session_state['map_center'] = [lat, lng]
         #st.write(f_map)
         #st.write(st.session_state['map_center'])
         if sub_map_col2.button('Update map', help='Dued to software limitation, the program need to run some function to make the map update and this button is made for that!'):
             None
+            
+        if sub_map_col3.button('Get new GPS Data'):
+            st.cache_data.clear()
+            lat, lng = get_location_data()
         
 
     #search_lat, search_lng = [0,0]
