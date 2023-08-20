@@ -53,12 +53,12 @@ geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
 
     
 lat, lng = get_location_data()
-if [lat, lng] == ['n/a','n/a']:
-    if st.button('Refresh GPS Data'):
-        st.cache_data.clear()
-        lat, lng = get_location_data()
-else:
+if [lat, lng] != ['n/a','n/a']:
     if 'map_center' not in st.session_state : st.session_state['map_center'] = [lat, lng]
+if st.button('Refresh GPS Data'):
+    st.cache_data.clear()
+    lat, lng = get_location_data()
+    
 
     #if 'sel_lat' not in globals():
     #    sel_lat, sel_lng = [0, 0]
@@ -109,10 +109,6 @@ else:
         #st.write(st.session_state['map_center'])
         if sub_map_col2.button('Update map', help='Dued to software limitation, the program need to run some function to make the map update and this button is made for that!'):
             None
-            
-        if sub_map_col3.button('Get new GPS Data'):
-            st.cache_data.clear()
-            lat, lng = get_location_data()
         
 
     #search_lat, search_lng = [0,0]
