@@ -5,6 +5,7 @@ import pandas as pd
 import pathlib
 
 if st.secrets['current_platform'] != "pc":
+    pathlib.WindowsPath = pathlib.PosixPath
     model_path = "./model/main_model.pkl"
 else:
     model_path = pathlib.Path('model\main_model.pkl')
