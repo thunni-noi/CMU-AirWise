@@ -18,9 +18,12 @@ st.set_page_config(
         'About' : 'https://github.com/thunni-noi/bicycle-prediction'
     }
 )
+#st.write(globals())
 
 
 if "map_markers" not in st.session_state: st.session_state["map_markers"] = []
+if "param" not in st.session_state: st.session_state["param"] = None
+if "prediction" not in st.session_state: st.session_state["prediction"] = None
 if 'sel_lat' not in st.session_state : st.session_state['sel_lat'] = 0
 if 'sel_lng' not in st.session_state : st.session_state['sel_lng'] = 0
 
@@ -171,14 +174,17 @@ else:
                 #weather_data = get_weather(st.session_state['location'][0], st.session_state['location'][1], weather_mode)
                 #air_data = getAirData(st.session_state['location'][0], st.session_state['location'][1])
                 predicted = model_predict(weather_data['humidity'], weather_data['temperature'], weather_data['pressure'], weather_data['rain'])
-                #st.session_state['weather'] = weather_data
+                st.session_state['param'] = [weather_data, air_data]
                 #st.session_state['pm25'] = air_data
-                #st.session_state['prediction'] = predicted
+                st.session_state['prediction'] = predicted
         
 
 
 
-    if 'weather_data' in globals():
+    if st.session_state['param'] is not None:
+        weather_data = st.session_state['param'][0]
+        air_data = st.session_state['param'][1]
+        predicted = st.session_state['prediction']
         with weather_col:
                 image_url = f"http://openweathermap.org/img/wn/{weather_data['icon']}@4x.png"
                 st.image(image_url)
