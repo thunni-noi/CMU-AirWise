@@ -27,6 +27,7 @@ if "prediction" not in st.session_state: st.session_state["prediction"] = None
 if 'sel_lat' not in st.session_state : st.session_state['sel_lat'] = 0
 if 'sel_lng' not in st.session_state : st.session_state['sel_lng'] = 0
 
+st.write('Some devices may experience error message when trying to fetch GPS data. If the error still persist press on three dot on top right then rerun the streamlit and the error should be gone!')
 @st.cache_data(experimental_allow_widgets=True)
 def get_location_data():
     global refetch_gps
