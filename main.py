@@ -57,6 +57,8 @@ lat, lng = get_location_data()
 if st.button('Refresh GPS Data'):
     st.cache_data.clear()
     lat, lng = get_location_data()
+if st.button('Skip GPS', help="set current location to 0,0; press this button if gps cannot be accessed"):
+    lat, lng = [0,0]
 
 if [lat, lng] != ['n/a','n/a']:
     if 'map_center' not in st.session_state : st.session_state['map_center'] = [lat, lng]
